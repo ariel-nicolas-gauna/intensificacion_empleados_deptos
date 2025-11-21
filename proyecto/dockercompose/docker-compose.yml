@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: dockercompose/Dockerfile
+    container_name: mvc_app
+    working_dir: /app
+    command: python python/main.py
+    volumes:
+      - ../python:/app/python
+
